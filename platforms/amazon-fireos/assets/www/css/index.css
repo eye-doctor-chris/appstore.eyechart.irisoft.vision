@@ -1,0 +1,174 @@
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100% !important;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    background-color: white;
+}
+
+input {
+    color: black;
+}
+
+.app-status a {
+    cursor: pointer;
+}
+.snellensize {
+    font-size: 35pt;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.line {
+    font-size: 50pt;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+#contentDiv1 {
+    display: table;
+    position: absolute;
+    width: 100%;
+}
+
+#contentDiv2 {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#dataTable {
+    text-align: center;
+}
+
+#dataTable {
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.dataTableTD1 {
+    text-align: center;
+    width: 8%;
+}
+
+.dataTableTD2 {
+    text-align: center;
+    width: 84%;
+}
+
+/**:focus,
+{
+    outline-color: green;
+    background: green;
+    opacity: 0.7;
+    outline-width: 10px;
+}*/
+
+.test-letter {
+    height: 109px;
+}
+
+.app {
+    display: none;
+}
+
+.settings-menu-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.settings-option {
+    padding: 15px;
+}
+
+.loading-screen {
+    width: 100%;
+    height: 100%;
+    background: #353535;
+}
+
+.loading-screen .logo {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    height: 69px;
+    padding-top: 17%;
+}
+
+.loading-screen .app-status p {
+	font-size: 12px;
+}
+
+.loading-screen .app-status small {
+	font-size: 14px;
+}
+
+.loading-screen .app-status {
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+    font-size: 34px;
+}
+
+.loading-screen .footer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    background: white;
+}
+
+#loginModal .login-image {
+    float: right;
+}
+
+#loginModal form {
+	text-align: left;
+}
+
+#loginModal h2 {
+	text-align: left;
+}
+
+/*Bootstrap Extensions*/
+
+.btn-xlg {
+    padding: 10px 157px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    margin: 15px;
+}
+/*Pure.CSS Extensions*/
+/* Button Overrides*/
+
+.menu-button {
+    background-color: #c5c5c5;
+}
+
+.menu-button:hover,
+.menu-button:focus {
+    -webkit-transform: scale(1.15);
+    background: -webkit-linear-gradient(top,rgba(63,169,245,1),rgba(32,85,123,1));
+}
+
+.pure-button-cancel {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(202, 60, 60);
+}
+
+.footer{
+    position:fixed;bottom:0;
+    margin: 0;
+    width:100%;
+    display:block;
+}
+.center {
+    text-align: center;
+}

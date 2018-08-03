@@ -1,1 +1,1 @@
-# appstore.eyechart.irisoft.vision
+# eyechart.irisoft.vision

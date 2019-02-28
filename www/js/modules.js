@@ -42,16 +42,16 @@ app.modules.chartManager = {
   // Previous index
   previousIndex: 0,
   performChartPseudoRandomization: function() {
-    // Find out how many chart types layout variations we have for a given chart type. 
+    // Find out how many chart types layout variations we have for a given chart type.
     // We need to subtract this length by one because the first value in this array is the chart type, the remainder are additional arrays we need to count.
     var maxRandomChartTypes = irisoft.constants.charts[app.chartType].length - 1;
-    
+
 
     // Generate a random number based on the length of charts sub-chart's arrays. Hard to explain
     // This number will be used to grab a random array from our multi-dimensional array of charts.
     // Changed to an ordered list from random
     var randomIndex = Math.floor(Math.random() * (maxRandomChartTypes)) + 1;
-    
+
      while (this.previousIndex === randomIndex) {
       randomIndex = Math.floor(Math.random() * (maxRandomChartTypes)) + 1;
      }
@@ -65,7 +65,7 @@ app.modules.chartManager = {
     // of the randomly sorted arrays.
 
     // Determine which chart is current
-   
+
     var newChartArray = irisoft.constants.charts[app.chartType][randomIndex];
     // Set our current in-use array to the new one.
     this.chart_array = newChartArray;
@@ -75,10 +75,10 @@ app.modules.chartManager = {
   },
   //Change the chart type
   performChartIndexChange: function(type) {
-    //TODO: Create a function that changes through chartTypes sequentially 
+    //TODO: Create a function that changes through chartTypes sequentially
     console.log("performChartTypeChange");
-    
-    
+
+
     //Determine which direction the index should move
     if (type === "left") {
       app.chartArrayIndex--;
@@ -95,10 +95,10 @@ app.modules.chartManager = {
     if (app.chartArrayIndex > 5) {
           app.chartArrayIndex = 1;
     }
-    
+
     if (app.chartArrayIndex < 1) {
       app.chartArrayIndex = 5;
-    }      
+    }
 
     var currentChartType = irisoft.constants.charts[app.chartType][app.chartArrayIndex];
     console.log(currentChartType);
@@ -107,8 +107,8 @@ app.modules.chartManager = {
     this.generateChartEntities(this.chart_array);
   },
 
-  /*@ Parameter: 
-    @   @type: string | "increase" or "decrease" or "none" for sizing. 
+  /*@ Parameter:
+    @   @type: string | "increase" or "decrease" or "none" for sizing.
   */
   performChartItemSizeOperation: function(type) {
 
@@ -521,7 +521,7 @@ app.modules.chartManager = {
 
   validateSizingDirectionOperation: function(chartState) {
     // We have reached the max magnification of this chart type, it should be a single levtter at 20/400.
-    // We just return out of this, we do not want to decrement chartSize or it could cause extra clicks 
+    // We just return out of this, we do not want to decrement chartSize or it could cause extra clicks
     // for the counter to get back on track.
     // app.chartSize keeps track of how many magnification levels we are at in either direction.
     if (app.chartState === irisoft.constants.chartStates.FULL && app.chartSize <= 1) {
@@ -561,11 +561,11 @@ app.modules.chartManager = {
     console.log(irisoft.constants.pixelsin2020 + ' generate chart' + ' Chart Array Index ' + this.chart_array );
     for (var i = 0; i < chart_array.length; i++) {
       if (i < 1) {
-        $('.400-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.400-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrored + ".png");
         $('.400-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 20) + "px");
         $('#row1-spacer').css("height", (irisoft.constants.pixelsin2020 * 20) + "px");
       } else if (i < 3) {
-        $('.200-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.200-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrored + ".png");
         $('.200-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 10) + "px");
         $('.200-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 10) + "px");
         $('.200-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 10) + "px");
@@ -704,8 +704,8 @@ app.modules.loadingScreen = {
 
       return callback(true);
     }, delay);
-  },  
-    
+  },
+
   showAuthSuccess: function(callback) {
     return this.changeLoaderText('<h3 style="color: #8DC500;"><i class="fa fa-check"></i> Your device has been successfully authenticated!</h3>', 1000, callback);
   },

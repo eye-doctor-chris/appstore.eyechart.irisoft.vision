@@ -3,7 +3,7 @@ var currentChartState;
 
 app.events = {
   bindRemoteKeyEvents: function() {
-    
+
     window.addEventListener("keyup", function(e) {
 
       // Only perform if we are in debug mode.
@@ -25,7 +25,7 @@ app.events = {
         case irisoft.constants.keyCodes.LEFT:
           app.modules.chartManager.performChartIndexChange("left");
           break
-        
+
         case irisoft.constants.keyCodes.RIGHT:
           app.modules.chartManager.performChartIndexChange("right");
           break;
@@ -40,12 +40,12 @@ app.events = {
           if (e.which === irisoft.constants.keyCodes.NEXT || e.which === irisoft.constants.keyCodes.F12) {
               app.chartType++;
               console.log("++")
-            } 
+            }
           else if (e.which === irisoft.constants.keyCodes.PREVIOUS || e.which === irisoft.constants.keyCodes.F10) {
               app.chartType--;
               console.log("--")
             }
-          
+
           console.log('Changing to Chart ' + app.chartType);
           if (app.chartType > 5) {
             app.chartType = 0;
@@ -54,13 +54,13 @@ app.events = {
           if (app.chartType < 0) {
             app.chartType = 5;
           }
-          
+
           console.log('Resetting Chart ' + app.chartType);
           if (app.state === "chart") {
             app.previousChartType = app.chartType;
 
             app.modules.chartManager.generateChartEntities(irisoft.constants.charts[app.chartType][app.chartArrayIndex]);
-            
+
           }
           break;
         case irisoft.constants.keyCodes.CENTER_BUTTON:
@@ -68,7 +68,7 @@ app.events = {
             if (app.chartState == irisoft.constants.chartStates.SINGLE_LINE) {
               app.chartState = irisoft.constants.chartStates.SINGLE_LETTER;
               console.log('SINGLE_LETTER');
-              
+
               return app.modules.chartManager.performChartItemSizeOperation("none");
             }
 
@@ -78,7 +78,7 @@ app.events = {
                 app.chartSize = 7;
               }
               console.log('FULL');
-              
+
               return app.modules.chartManager.performChartItemSizeOperation("none");
             }
 
@@ -97,7 +97,7 @@ app.events = {
   },
 
   bindMenuEvent: function() {
-    
+
     document.addEventListener("menubutton", app.events.onMenuKeyDown, false);
     document.addEventListener("keydown", function(e){
       if (e.which === irisoft.constants.keyCodes.M) {
@@ -136,14 +136,27 @@ app.events = {
       app.modules.chartManager.generateChartEntities(irisoft.constants.charts[app.chartType][1]);
       app.events.onMenuKeyDown();
     }, false);
+    document.getElementById("mirror").addEventListener("click", function() {
+          // app.chartType = 5;
+          if (irisoft.constants.isMirrored === false) {
+            irisoft.constants.isMirrored === true;
+            irisoft.constants.mirrored === '11';
+            else {
+              irisoft.constants.isMirrored === false;
+              irisoft.constants.mirrored === '';
+            }
+          }
 
-    
-    
+          app.modules.chartManager.generateChartEntities(irisoft.constants.charts[app.chartType][1]);
+          app.events.onMenuKeyDown();
+        }, false);
+
+
   },
   bindSettingsEvent: function() {
     var settingsModal = $('[data-remodal-id=settingsModal]').remodal();
     var settingsModalState = settingsModal.getState();
-    
+
     document.getElementById("settings").addEventListener("click", function() {
       onSettingsClick();
     }, false);
@@ -154,7 +167,7 @@ app.events = {
       app.events.onMenuKeyDown();
     }, false);
 
-      
+
       // Open the Settings Modal
       function onSettingsClick() {
         app.events.onMenuKeyDown();
@@ -175,7 +188,7 @@ app.events = {
         $("#currentValChartDistance").text("Current Value: " + chartDistanceInches);
         $("#currentValScreenHeightInches").text("Current Value: " + screenSizeHeightInches);
         $("#currentValScreenHeightPixels").text("Current Value: " + screenSizeHeightPixels);
-      
+
 
       }
 
@@ -184,7 +197,7 @@ app.events = {
         var screenHeightInches = $("#screenHeightInches").val();
         var screenHeightPixels = $("#screenHeightPixels").val();
 
-          // TODO Add alert for value that are too large 
+          // TODO Add alert for value that are too large
           if (chartDistanceInches < 360 && chartDistanceInches > 60){
             writeChartDistanceInchesLocalStorage(chartDistanceInches);
             console.log(chartDistanceInches);
@@ -192,7 +205,7 @@ app.events = {
           else {
             alert("Please choose a value between 60 and 360 inches");
           }
-          
+
           if (screenHeightInches < 60 && screenHeightInches > 6){
             writeScreenHeightInchesLocalStorage(screenHeightInches);
             console.log(screenHeightInches);
@@ -200,7 +213,7 @@ app.events = {
           else {
             alert("Please choose a value between 6 and 60 inches");
           }
-          
+
           if (screenHeightPixels < 6000 && screenHeightPixels > 720){
           writeScreenHeightPixelsLocalStorage(screenHeightPixels);
             console.log(screenHeightPixels);
@@ -223,20 +236,20 @@ app.events = {
 
   onMenuKeyDown: function() {
       // Initialize remodal (ext. lib) - https://github.com/VodkaBears/Remodal
-      
+
       var menuModal = $('[data-remodal-id=menuModal]').remodal();
       var menuModalState = menuModal.getState();
       currentChartState = app.chartState;
-    
+
       // Check modal state
       if (menuModalState === "closed") {
-        
+
         app.state = "menu";
-        
+
         menuModal.open();
         menuModalState = "opened";
         console.log(menuModalState);
-        
+
         setTimeout(function() {
           $(".menu-button").first().focus();
         }, 500)
@@ -249,7 +262,7 @@ app.events = {
              console.log(app.state);
              menuModal.close();
            }
-       
+
       return;
   },
 
@@ -272,10 +285,10 @@ app.events = {
       app.modules.chartManager.performChartItemSizeOperation("none");
       app.modules.chartManager.generateChartEntities(irisoft.constants.charts[1][1]);
 
-      } 
+      }
 
   },
-  
+
   // REMOVE?
    bindNavigation: function() {
   //   document.addEventListener("keydown", function(e) {

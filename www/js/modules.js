@@ -561,11 +561,11 @@ app.modules.chartManager = {
     console.log(irisoft.constants.pixelsin2020 + ' generate chart' + ' Chart Array Index ' + this.chart_array );
     for (var i = 0; i < chart_array.length; i++) {
       if (i < 1) {
-        $('.400-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.400-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrored + ".png");
         $('.400-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 20) + "px");
         $('#row1-spacer').css("height", (irisoft.constants.pixelsin2020 * 20) + "px");
       } else if (i < 3) {
-        $('.200-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.200-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrored + ".png");
         $('.200-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 10) + "px");
         $('.200-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 10) + "px");
         $('.200-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 10) + "px");

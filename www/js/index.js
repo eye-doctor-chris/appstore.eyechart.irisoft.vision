@@ -39,11 +39,14 @@ var app = {
     app.chartState = irisoft.constants.chartStates.FULL;
 
     this.bindEvents();
+    //this.onDeviceReady();
   },
   pixelCal: function() {
       var screenSizeHeightPixels = readScreenHeightPixelsLocalStorage();
       var screenSizeHeightInches = readScreenHeightInchesLocalStorage();
       var chartDistanceInches = readChartDistanceInchesLocalStorage();
+      var mirrorState = readChartMirrorStateLocalStorage();
+      
       var pixelsin2020 = screenSizeHeightPixels / screenSizeHeightInches * (Math.tan(5 / 60 * Math.PI / 180) * chartDistanceInches);     
       
       //Set global pixelin2020
@@ -112,6 +115,7 @@ var app = {
     // });
   },
   initApp: function() {
+    app.modules.chartManager.performChartMirror();
     app.modules.chartManager.initialize();
 
     // Disable loading screen
@@ -132,7 +136,9 @@ var app = {
   },
 
   // deviceready Event Handler
+ 
   onDeviceReady: function() {
+    console.log("onDeviceReady")
     app.modules.loadingScreen.changeLoaderText("Device is ready...", 750, function() {
 
       app.modules.loadingScreen.changeLoaderText("Starting application and loading assets.", 750, function() {
@@ -175,3 +181,10 @@ var app = {
 
 // Initialization point for the entire app.
 app.initialize();
+
+// Only for browser debuggin
+$(document).ready(function() {
+    
+        app.onDeviceReady();
+    
+});

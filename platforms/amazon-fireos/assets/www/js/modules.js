@@ -7,7 +7,23 @@ app.modules.chartManager = {
   initialize: function() {
     this.generateChartEntities(this.chart_array);
   },
-
+  performChartMirror: function() {
+    // Toogles the Mirror state
+   
+   /* if (mirroredState === "direct") {
+    
+       mirroredState = "mirrored";
+       mirrored = "11";
+        writeChartMirrorStateLocalStorage(mirroredState);
+     else {
+  
+          mirroredState = "direct";
+          mirrored = "";
+          writeChartMirrorStateLocalStorage(mirroredState);
+        }
+      }*/
+  
+  },
   performChartTrueRandomization: function() {
     // Shuffle chart_array
     this.chart_array = function(chart_array) {

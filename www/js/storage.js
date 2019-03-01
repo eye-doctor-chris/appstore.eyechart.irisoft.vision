@@ -17,6 +17,7 @@ var readChartDistanceInchesLocalStorage = function() {
     } else {
         console.log('chart_distance_Inches not found');
         return 240;
+
     }
 }
 
@@ -53,6 +54,21 @@ var readScreenHeightInchesLocalStorage = function() {
         return 11.525;
     }
 }
-
+//user chart mirror state
+var writeChartMirrorStateLocalStorage = function (mirror_state) {
+    window.localStorage.setItem("mirror_state", mirror_state);
+   console.log('Write mirror_state ' + mirror_state);
+    
+}
+var readChartMirrorStateLocalStorage = function() {
+    var value = window.localStorage.getItem("mirror_state");
+    if (value) {
+       console.log('Read current mirror_state ' + value);
+        return value;       
+    } else {
+        console.log('mirror_state set to direct');
+        return "direct";
+    }
+}
 
 

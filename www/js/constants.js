@@ -29,6 +29,7 @@ irisoft.constants = {
     TUMBLING_C_CHART: 4,
     NUMBERS_CHART: 5
   },
+  mirrorToggle: '',
   pixelsin2020: 0,
   //ICONS_CHART_ARRAY: ['house', 'BdayCake', 'circle', 'house', 'square', 'circle', 'square', 'circle', 'BdayCake', 'house', 'house', 'circle', 'square', 'BdayCake', 'house', 'circle', 'circle', 'square', 'BdayCake', 'house', 'square', 'BdayCake', 'square', 'BdayCake', 'house', 'circle', 'house', 'square', 'BdayCake', 'house', 'circle', 'square', 'circle', 'house', 'BdayCake', 'circle', 'square', 'house', 'BdayCake', 'square', 'square', 'BdayCake', 'circle', 'house', 'BdayCake', 'circle', 'house', 'BdayCake', 'circle', 'square', 'circle', 'BdayCake', 'circle', 'square', 'house', 'BdayCake', 'square', 'circle'],
   //SNELLEN_CHART_ARRAY: ['E', 'Z', 'P', 'F', 'V', 'N', 'P', 'H', 'T', 'C', 'V', 'L', 'N', 'E', 'Z', 'D', 'A', 'O', 'F', 'V', 'E', 'K', 'N', 'D', 'H', 'F', 'Z', 'O', 'D', 'E', 'O', 'F', 'L', 'T', 'C', 'A', 'P', 'E', 'O', 'T', 'T', 'Z', 'V', 'E', 'C', 'O', 'H', 'P', 'N', 'T'],

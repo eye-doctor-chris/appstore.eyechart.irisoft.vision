@@ -136,6 +136,13 @@ app.events = {
       app.modules.chartManager.generateChartEntities(irisoft.constants.charts[app.chartType][1]);
       app.events.onMenuKeyDown();
     }, false);
+    document.getElementById("mirror").addEventListener("click", function() {
+      // app.chartType = 5;
+      app.modules.chartManager.performChartMirror();
+
+      app.modules.chartManager.generateChartEntities(irisoft.constants.charts[app.chartType][1]);
+     app.events.onMenuKeyDown();
+   }, false);
 
     
     

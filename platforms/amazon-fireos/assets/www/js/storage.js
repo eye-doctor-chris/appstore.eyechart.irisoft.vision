@@ -53,6 +53,20 @@ var readScreenHeightInchesLocalStorage = function() {
         return 11.525;
     }
 }
-
+//user chart mirror state
+var writeChartMirrorStateLocalStorage = function (mirrorState) {
+    window.localStorage.setItem("mirrorstate", mirrorstate);
+    
+}
+var readChartMirrorStateLocalStorage = function() {
+    var value = window.localStorage.getItem("mirrorstate");
+    if (value) {
+        
+        return value;       
+    } else {
+        
+        return "direct";
+    }
+}
 
 

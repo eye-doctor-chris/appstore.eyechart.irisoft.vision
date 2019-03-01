@@ -136,6 +136,7 @@ app.events = {
       app.modules.chartManager.generateChartEntities(irisoft.constants.charts[app.chartType][1]);
       app.events.onMenuKeyDown();
     }, false);
+    
 
     
     
@@ -147,6 +148,9 @@ app.events = {
     document.getElementById("settings").addEventListener("click", function() {
       onSettingsClick();
     }, false);
+    document.getElementById("mirror").addEventListener("click", function() {
+      onSettingsClick();
+   }, false);
     document.getElementById("settingsSaveDefaults").addEventListener("click", function() {
       saveDefaults();
     }, false);
@@ -163,19 +167,35 @@ app.events = {
 
         setTimeout(function() {
           $("input").first().focus();
-        }, 500)
-        return ;
+        }, 500);
+        //return ;
 
         var screenSizeHeightPixels = readScreenHeightPixelsLocalStorage();
         var screenSizeHeightInches = readScreenHeightInchesLocalStorage();
         var chartDistanceInches = readChartDistanceInchesLocalStorage();
+        var mirrorState = readChartMirrorStateLocalStorage();
 
         console.log(screenSizeHeightPixels);
+        console.log(screenSizeHeightInches);
+        console.log(chartDistanceInches);
+        console.log(mirrorState);
 
-        $("#currentValChartDistance").text("Current Value: " + chartDistanceInches);
-        $("#currentValScreenHeightInches").text("Current Value: " + screenSizeHeightInches);
-        $("#currentValScreenHeightPixels").text("Current Value: " + screenSizeHeightPixels);
-      
+        $("#chartDistanceInches").val(chartDistanceInches);
+        $("#screenHeightInches").val(screenSizeHeightInches);
+        $("#screenHeightPixels").val(screenSizeHeightPixels);
+        //$("#mirrorState").attr("checked", mirrorState);
+        if (mirrorState == 'direct' ){
+            $("#directscreen").attr("checked", "checked");
+        } else {
+            $("#mirrorscreen").attr("checked", "checked");
+        }
+
+        
+
+        $("#currentValChartDistance").text("Max 360 inches");
+        $("#currentValScreenHeightInches").text("Max Height 60 inches");
+        $("#currentValScreenHeightPixels").text("Usually 720 or 1080");
+        
 
       }
 
@@ -183,7 +203,8 @@ app.events = {
         var chartDistanceInches = $("#chartDistanceInches").val();
         var screenHeightInches = $("#screenHeightInches").val();
         var screenHeightPixels = $("#screenHeightPixels").val();
-
+        //var mirrorState = $("#mirrorState").prop("checked");
+        var mirrorState = $('input[name=mirroroption]:checked').val();
           // TODO Add alert for value that are too large 
           if (chartDistanceInches < 360 && chartDistanceInches > 60){
             writeChartDistanceInchesLocalStorage(chartDistanceInches);
@@ -201,14 +222,16 @@ app.events = {
             alert("Please choose a value between 6 and 60 inches");
           }
           
-          if (screenHeightPixels < 6000 && screenHeightPixels > 720){
+          if (screenHeightPixels < 6000 && screenHeightPixels > 719){
           writeScreenHeightPixelsLocalStorage(screenHeightPixels);
             console.log(screenHeightPixels);
           }
           else {
             alert("Please choose a value between 720 and 6000 pixels");
           }
-
+          writeChartMirrorStateLocalStorage(mirrorState);
+          app.modules.chartManager.performChartMirror();
+            console.log('Write mirrorState '+ mirrorState);
           var settingsModal = $('[data-remodal-id=settingsModal]').remodal();
           settingsModal.close();
           app.state = "chart";

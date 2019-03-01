@@ -183,8 +183,8 @@ var app = {
 app.initialize();
 
 // Only for browser debuggin
-$(document).ready(function() {
+// $(document).ready(function() {
     
-        app.onDeviceReady();
+//         app.onDeviceReady();
     
-});
+// });

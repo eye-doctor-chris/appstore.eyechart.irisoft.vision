@@ -1,21 +1,21 @@
-# view AndroidManifest.xml #generated:13
+# view AndroidManifest.xml #generated:15
 -keep class org.chromium.content.app.SandboxedProcessService0 { <init>(...); }
 
-# view AndroidManifest.xml #generated:14
+# view AndroidManifest.xml #generated:16
 -keep class org.chromium.content.app.SandboxedProcessService1 { <init>(...); }
 
-# view AndroidManifest.xml #generated:15
+# view AndroidManifest.xml #generated:17
 -keep class org.chromium.content.app.SandboxedProcessService2 { <init>(...); }
 
-# view AndroidManifest.xml #generated:16
+# view AndroidManifest.xml #generated:18
 -keep class org.chromium.content.app.SandboxedProcessService3 { <init>(...); }
 
-# view AndroidManifest.xml #generated:17
+# view AndroidManifest.xml #generated:19
 -keep class org.chromium.content.app.SandboxedProcessService4 { <init>(...); }
 
-# view AndroidManifest.xml #generated:18
+# view AndroidManifest.xml #generated:20
 -keep class org.chromium.content.app.SandboxedProcessService5 { <init>(...); }
 
-# view AndroidManifest.xml #generated:6
+# view AndroidManifest.xml #generated:7
 -keep class vision.irisoft.eyechart.IrisoftEyeChart { <init>(...); }
 

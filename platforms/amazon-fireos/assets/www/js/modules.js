@@ -9,19 +9,23 @@ app.modules.chartManager = {
   },
   performChartMirror: function() {
     // Toogles the Mirror state
-   
-   /* if (mirroredState === "direct") {
+    var mirrorState = readChartMirrorStateLocalStorage();
+    console.log('preformChartMirror ' + mirrorState);
+    if (mirrorState == "mirror") {
     
-       mirroredState = "mirrored";
-       mirrored = "11";
-        writeChartMirrorStateLocalStorage(mirroredState);
-     else {
+          //mirrorState = true;
+          irisoft.constants.mirrorToggle = '11';
+          console.log('Mirror on' + irisoft.constants.mirrorToggle);
+         // writeChartMirrorStateLocalStorage(mirroredState);
+     }
+     else  {
   
-          mirroredState = "direct";
-          mirrored = "";
-          writeChartMirrorStateLocalStorage(mirroredState);
+          //mirrorState = false;
+          irisoft.constants.mirrorToggle = '';
+          console.log('Mirror off' + irisoft.constants.mirrorToggle);
+         // writeChartMirrorStateLocalStorage(mirroredState);
         }
-      }*/
+      
   
   },
   performChartTrueRandomization: function() {
@@ -577,71 +581,71 @@ app.modules.chartManager = {
     console.log(irisoft.constants.pixelsin2020 + ' generate chart' + ' Chart Array Index ' + this.chart_array );
     for (var i = 0; i < chart_array.length; i++) {
       if (i < 1) {
-        $('.400-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.400-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.400-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 20) + "px");
         $('#row1-spacer').css("height", (irisoft.constants.pixelsin2020 * 20) + "px");
       } else if (i < 3) {
-        $('.200-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.200-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.200-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 10) + "px");
         $('.200-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 10) + "px");
         $('.200-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 10) + "px");
         $('#row2-spacer').css("height", (irisoft.constants.pixelsin2020 * 10) + "px");
       } else if (i < 6) {
-        $('.160-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.160-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.160-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 8) + "px");
         $('.160-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 8) + "px");
         $('.160-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 8) + "px");
         $('#row3-spacer').css("height", (irisoft.constants.pixelsin2020 * 8) + "px");
       } else if (i < 10) {
-        $('.100-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.100-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.100-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 5) + "px");
         $('.100-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 5) + "px");
         $('.100-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 5) + "px");
         $('#row4-spacer').css("height", (irisoft.constants.pixelsin2020 * 5) + "px");
       } else if (i < 15) {
-        $('.80-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.80-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.80-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 4) + "px");
         $('.80-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 4) + "px");
         $('.80-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 4) + "px");
         $('#row5-spacer').css("height", (irisoft.constants.pixelsin2020 * 4) + "px");
       } else if (i < 20) {
-        $('.60-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.60-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.60-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 3) + "px");
         $('.60-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 3) + "px");
         $('.60-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 3) + "px");
         $('#row6-spacer').css("height", (irisoft.constants.pixelsin2020 * 3) + "px");
       } else if (i < 25) {
-        $('.50-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.50-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.50-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 2.50) + "px");
         $('.50-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 2.50) + "px");
         $('.50-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 2.50) + "px");
         $('#row7-spacer').css("height", (irisoft.constants.pixelsin2020 * 2.50) + "px");
       } else if (i < 30) {
-        $('.40-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.40-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.40-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 2) + "px");
         $('.40-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 2) + "px");
         $('.40-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 2) + "px");
         $('#row8-spacer').css("height", (irisoft.constants.pixelsin2020 * 2) + "px");
       } else if (i < 35) {
-        $('.30-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.30-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.30-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 1.50) + "px");
         $('.30-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 1.50) + "px");
         $('.30-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 1.50) + "px");
         $('#row9-spacer').css("height", (irisoft.constants.pixelsin2020 * 1.50) + "px");
       } else if (i < 40) {
-        $('.25-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.25-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.25-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 1.25) + "px");
         $('.25-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 1.25) + "px");
         $('.25-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 1.25) + "px");
         $('#row10-spacer').css("height", (irisoft.constants.pixelsin2020 * 1.25) + "px");
       } else if (i < 45) {
-        $('.20-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.20-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.20-' + (i + 1)).css("height", irisoft.constants.pixelsin2020 + "px");
         $('.20-' + (i + 1) + '-1').css("width", irisoft.constants.pixelsin2020 + "px");
         $('.20-' + (i + 1) + '-1').css("height", irisoft.constants.pixelsin2020 + "px");
         $('#row11-spacer').css("height", irisoft.constants.pixelsin2020 + "px");
       } else if (i < 50) {
-        $('.15-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + ".png");
+        $('.15-' + (i + 1)).attr('src', "img/chart-images/" + chart_array[i] + irisoft.constants.mirrorToggle + ".png");
         $('.15-' + (i + 1)).css("height", (irisoft.constants.pixelsin2020 * 0.75) + "px");
         $('.15-' + (i + 1) + '-1').css("width", (irisoft.constants.pixelsin2020 * 0.75) + "px");
         $('.15-' + (i + 1) + '-1').css("height", (irisoft.constants.pixelsin2020 * 0.75) + "px");

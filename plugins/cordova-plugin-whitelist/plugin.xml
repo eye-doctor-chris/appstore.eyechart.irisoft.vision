@@ -36,6 +36,7 @@
                 <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin"/>
                 <param name="onload" value="true" />
             </feature>
+            <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
         </config-file>
 
         <source-file src="src/android/WhitelistPlugin.java" target-dir="src/org/apache/cordova/whitelist" />

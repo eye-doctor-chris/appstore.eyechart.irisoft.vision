@@ -73,6 +73,7 @@
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/A.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/A11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/BdayCake.png \
+/Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/BdayCake11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/C.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/C1.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/C11.png \
@@ -84,6 +85,7 @@
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/C4.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/C411.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/circle.png \
+/Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/circle11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/D.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/D11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/E.png \
@@ -101,7 +103,9 @@
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/F.svg \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/F11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/H.png \
+/Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/H11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/house.png \
+/Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/house11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/K.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/K11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/L.png \
@@ -120,6 +124,7 @@
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/S.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/S11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/square.png \
+/Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/square11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/T.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/T11.png \
 /Users/Chris/Documents/GitHub/appstore.eyechart.irisoft.vision/platforms/amazon-fireos/assets/www/img/chart-images/V.png \

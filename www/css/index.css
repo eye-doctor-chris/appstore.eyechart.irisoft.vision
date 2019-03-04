@@ -60,7 +60,7 @@ input {
     width: 84%;
 }
 
-/**:focus,
+/*:focus,
 {
     outline-color: green;
     background: green;
@@ -149,10 +149,20 @@ input {
 .menu-button {
     background-color: #c5c5c5;
 }
-
+.pure-button-cancel:hover,
+.pure-button-cancel:focus,
+.pure-button-primary:hover,
+.pure-button-primary:focus {
+    -webkit-transform: scale(1.25);
+}
+.selector:hover,
+.selector:focus {
+    font-size: 35px;
+    -webkit-transform: scale(1.15);
+}
 .menu-button:hover,
 .menu-button:focus {
-    -webkit-transform: scale(1.15);
+    -webkit-transform: scale(1.25);
     background: -webkit-linear-gradient(top,rgba(63,169,245,1),rgba(32,85,123,1));
 }
 
